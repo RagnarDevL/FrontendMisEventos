@@ -161,7 +161,7 @@ export default defineComponent({
                 closeAddAttendeeModal();
                 fetchEvents();
                 showWarning('Asistente agregado exitosamente.', 'success');
-                openAttendeeListModal(currentEventId.value);
+                
             } catch (err) {
                 console.error('Error adding attendee:', err);
                 showWarning('No se pudo agregar el asistente. Intenta de nuevo más tarde.');

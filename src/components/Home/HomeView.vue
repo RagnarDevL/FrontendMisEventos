@@ -194,7 +194,7 @@
         <div v-if="showAddSpeakerModal" class="modal">
             <div class="modal-content">
                 <span class="close" @click="closeAddSpeakerModal">&times;</span>
-                <h2>Agregar Speaker</h2>
+                <h2>Agregar Ponente</h2>
                 <form @submit.prevent="addSpeaker">
                     <label for="speakerName">Nombre:</label>
                     <input type="text" id="speakerName" v-model="newSpeaker.name" required>

@@ -9,7 +9,7 @@ const routes = [
     component: Login
   },
   {
-    path: '/',
+    path: '/*',
     redirect: '/login' 
   },
   {

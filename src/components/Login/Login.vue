@@ -46,12 +46,7 @@
         </button>
       </div>
 
-      <!-- Button Create User -->
-      <div class="d-flex justify-content-center my-4">
-        <button class="btn-login" @click="createUser " :disabled="spinner">
-          Crear Usuario 
-        </button>
-      </div>
+     
 
       <!-- Mensajes de sesión -->
 
