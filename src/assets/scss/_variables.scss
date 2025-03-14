@@ -1,0 +1,12 @@
+$font-primary : 'GothamRounded';
+$font-secundary : 'Open Sans';
+
+$color-coomotor-blue: #1480d1;
+$color-hover-ligth: #ebf2ff;
+
+@mixin font($family, $size, $weight, $line){
+	font-family: $family;
+	font-size: $size;
+	font-weight: $weight;
+	line-height : $line;
+}

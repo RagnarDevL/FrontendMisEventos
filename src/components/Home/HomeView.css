@@ -1,0 +1,288 @@
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 10px;
+}
+.left-buttons {
+    display: flex;
+    gap: 10px;
+}
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    &:hover {
+                background-color: #0056b3;
+            }
+}
+.home-view {
+h1 {
+text-align: center;
+margin-bottom: 20px;
+color: #333;
+}
+
+.add-event-button {
+    display: block;
+    margin: 0 auto 8px;
+    background-color: #d66d55; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 12px; /* Bordes redondeados */
+    padding: 5px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves para el color y la escala */
+}
+
+.add-event-button:hover {
+    background-color: #c55b47; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño del botón */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto; /* Espaciado superior e inferior */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Para que los bordes redondeados se apliquen */
+}
+
+thead {
+    background-color: #82b2e7; /* Color de fondo más atractivo */
+    color: white;
+
+    th {
+        padding: 12px;
+        text-align: left;
+        font-weight: bold; /* Negrita para los encabezados */
+        text-transform: uppercase; /* Texto en mayúsculas */
+        letter-spacing: 0.5px; /* Espaciado entre letras */
+    }
+}
+
+tbody {
+    tr {
+        &:nth-child(even) {
+            background-color: #f9f9f9; /* Color de fondo más suave para filas pares */
+        }
+
+        &:hover {
+            background-color: #f1f1f1; /* Color por defecto al hacer hover */
+        }
+
+        /* Estilos de hover según el estado */
+        &[data-status='Pendiente']:hover {
+            background-color: #fff3cd; /* Color para "pending" */
+        }
+
+        &[data-status='Iniciado']:hover {
+            background-color: #d4edda; /* Color para "active" */
+        }
+
+        &[data-status='Cancelado']:hover,
+        &[data-status='Finalizado']:hover,
+        &[data-status='Vencido']:hover {
+            background-color: #f8d7da; /* Color para "cancelled" */
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left; /* Alinear texto a la izquierda */
+            font-size: 14px; /* Tamaño de fuente más pequeño */
+            color: #333; /* Color de texto más oscuro */
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transición suave para el fondo */
+
+            &:hover {
+                background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+            }
+        }
+    }
+}
+
+.error {
+color: red;
+text-align: center;
+margin-top: 20px;
+}
+
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 1000; /* Asegúrate de que el modal esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo más oscuro para mayor contraste */
+    transition: background-color 0.3s ease;
+
+.modal-content {
+    background-color: #ffffff; /* Fondo blanco para el contenido */
+    margin: 10% auto; /* Espaciado superior más pequeño */
+    padding: 30px; /* Mayor padding para un mejor espaciado */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    width: 90%; /* Ancho más responsivo */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    transition: transform 0.3s ease; /* Transición suave para el contenido */
+    transform: translateY(-30px); /* Desplazamiento inicial para la animación */
+    opacity: 1; /* Inicialmente oculto */
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        transition: color 0.3s ease; /* Transición suave para el color */
+    
+        &:hover,
+        &:focus {
+            color: #ff4d4d; /* Color más atractivo al pasar el mouse */
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333; /* Color de texto más oscuro para mejor legibilidad */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555; /* Color de texto más suave */
+        }
+    
+        input {
+            padding: 12px; /* Mayor padding para un mejor aspecto */
+            margin-bottom: 15px; /* Espaciado inferior más grande */
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease; /* Transición suave para el borde */
+    
+            &:focus {
+                border-color: #28a745; /* Color de borde al enfocar */
+                outline: none; /* Eliminar el contorno predeterminado */
+            }
+        }
+    
+        button {
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transición suave para el fondo */
+    
+            &:hover {
+                background-color: #1c76d6; /* Color más oscuro al pasar el mouse */
+            }
+        }
+    }
+}
+}
+}
+.alert {
+padding: 15px;
+margin: 10px 0;
+border-radius: 5px;
+position: relative;
+}
+.alert-info {
+background-color: #d9edf7;
+color: #31708f;
+}
+.alert-success {
+background-color: #dff0d8;
+color: #3c763d;
+}
+.alert-error {
+background-color: #f2dede;
+color: #a94442;
+}
+.alert-warning {
+background-color: #fcf8e3;
+color: #8a6d3b;
+}
+.close {
+position: absolute;
+top: 10px;
+right: 15px;
+cursor: pointer;
+}
+
+.custom-select {
+    width: 100%; /* Ancho completo */
+    padding: 12px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 4px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #333; /* Color del texto */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+    appearance: none; /* Eliminar el estilo predeterminado del navegador */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23333"/></svg>'); /* Flecha personalizada */
+    background-repeat: no-repeat; /* No repetir la imagen de fondo */
+    background-position: right 10px center; /* Posicionar la flecha */
+    background-size: 10px; /* Tamaño de la flecha */
+}
+
+.custom-select:focus {
+    border-color: #28a745; /* Color de borde al enfocar */
+    outline: none; /* Eliminar el contorno predeterminado */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.pagination button {
+    padding: 10px 15px; /* Espaciado interno */
+    margin: 0 5px; /* Espaciado entre botones */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+.pagination button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+}
+
+.pagination button:disabled {
+    background-color: #ccc; /* Color para el botón deshabilitado */
+    cursor: not-allowed; /* Cambiar el cursor para indicar que está deshabilitado */
+    opacity: 0.7; /* Opacidad para el botón deshabilitado */
+}
+
+.pagination span {
+    align-self: center; /* Centrar el texto de la página */
+    margin: 0 10px; /* Espaciado horizontal */
+    font-weight: bold; /* Negrita para el texto de la página */
+}

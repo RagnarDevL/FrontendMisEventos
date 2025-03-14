@@ -1,0 +1,189 @@
+@import "../../assets/scss/variables";
+
+.wrapper-login {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+  margin-top: -140px;
+  .login {
+    padding-top: 5px;
+    width: 350px;
+
+    label {
+      color: #667085;
+      @include font($font-secundary, 17px, 400, 16px);
+    }
+
+    .input-with-icon {
+      color: #667085;
+      position: relative;
+
+      input {
+        width: 100%;
+        color: #667085;
+        font-size: 18px;
+        border-radius: 8px;
+        background: #ffffff;
+        box-sizing: border-box;
+        padding: 5px 40px 5px 35px;
+        border: 1px solid #CECECE;
+
+        &:hover {
+          border: 1px solid #40a9ff;
+        }
+
+        &:focus {
+          border: 1px solid #40a9ff;
+          outline: none;
+        }
+      }
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &.left {
+          left: 10px;
+        }
+
+        &.right {
+          right: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    h4 {
+      @include font($font-secundary, 22px, 600, 20px);
+    }
+  }
+
+  .pst-logo {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  .closed-session {
+    width: 340px;
+    padding: 15px;
+    color: #667085;
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+    p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .alert-message {
+    padding: 10px;
+    background: #fffef9;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #000000 !important;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .alert-message2 {
+    padding: 10px;
+    background: #fd6f6f;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03);
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #000000 !important;
+    }
+
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .btn-login {
+    display: table-cell;
+    gap: 15px;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.4s ease;
+    // background: #012840;
+    background: #a8c7e9;
+    // border: 1px solid #012840;
+    border: 1px solid #0F7CBF;
+    @include font($font-secundary, 18px, 600, 20px);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    margin-top: 15px;
+    &:hover {
+      background-color: #3879be;
+
+      text-decoration: none;
+    }
+  }
+
+  .btn-back {
+    color: #ffffff !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #667085;
+    border: 1px solid #667085;
+    @include font($font-secundary, 18px, 600, 20px);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
+    &:hover {
+      background-color: #3879be;
+
+      text-decoration: none;
+    }
+  }
+
+  .title-forgot {
+    color: #0F7CBF;
+    margin: 20px 0 10px 0;
+  }
+
+  p, a {
+    color: #FFF !important;
+    @include font($font-secundary, 15px, 400, 16px);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .copyright {
+    text-align: center;
+    margin: 45px 0 0px 0;
+    padding: 0px;
+    color: #FFF;
+    font-size: 14px;
+  }
+}
